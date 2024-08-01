@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adv.css">
+    <title>Student-Teacher Appointment Booking</title>
+</head>
+<body>
+    <header id="home">
+      <nav>
+        <h1>AppointmentKing</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#appointments">Appointments</a></li>
+            <li><a href="#add-appointment">New Appointment</a></li>
+        </ul>
+      </nav>
+      <div class="welcome-appointment"></div>
+    </header>
+    <main>
+        <section id="appointments">
+            <h1 class="section-title">Appointments</h1>
+            <div class="appointments-container"></div>
+        </section>
+        <section id="add-appointment">
+            <h1 class="section-title">New Appointment</h1>
+            <form class="form">
+                <input type="text" id="student-name" placeholder="Student Name">
+                <input type="text" id="teacher-name" placeholder="Teacher Name">
+                <input type="datetime-local" id="appointment-time">
+                <textarea id="description" cols="30" rows="10" placeholder="Description..."></textarea>
+                <button class="btn btn-primary">Save</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "xxxxxxxxxxxxxxxxxxxxxxxxx",
+        authDomain: "xxxxxxxxxxxxxxxxxxxxxxxxx",
+        databaseURL: "xxxxxxxxxxxxxxxxxxxxxxxxx",
+        projectId: "xxxxxxxxxxxxxxxxxxxxxxxxx",
+        storageBucket: "xxxxxxxxxxxxxxxxxxxxxxxxx",
+        messagingSenderId: "xxxxxxxxxxxxxxxxxxxxxxxxx",
+        appId: "xxxxxxxxxxxxxxxxxxxxxxxxx"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore()
+    </script>
+
+
+    <script src="adv.js"></script>
+
+</body>
+</html>
